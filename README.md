@@ -1,3 +1,3 @@
 ## Attendance Data Analytics
 
-#DUU Tech Team
+DUU Tech Team
