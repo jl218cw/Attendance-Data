@@ -3,4 +3,16 @@ title: "Attendance-data"
 format: html
 ---
 
-This is Anric's branch!
+```{r}
+library(readxl)
+
+# Step 1: Read the Excel file
+demographic <- read_excel("data/Demographic Crosstab.xlsx")
+
+# Step 2: Write it out as CSV
+write.csv(demographic, "data/Demographic Crosstab.csv")
+
+crosstab <- read_excel("data/Event Crosstab.xlsx")
+write.csv(crosstab, "data/Event Crosstab.csv")
+```
+
