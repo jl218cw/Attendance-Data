@@ -1,6 +1,6 @@
 ---
 title: "Attendance-data"
-format: html
+format: pdf
 ---
 
 ```{r}
