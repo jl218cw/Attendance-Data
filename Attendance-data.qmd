@@ -16,3 +16,69 @@ crosstab <- read_excel("data/Event Crosstab.xlsx")
 write.csv(crosstab, "data/Event Crosstab.csv")
 ```
 
+```{r}
+library(tidyverse)
+library(tidymodels)
+```
+
+
+```{r}
+demographic <- read_csv("data/Demographic Crosstab.csv")
+event <- read_csv("data/Event Crosstab.csv")
+```
+```{r}
+demographic |>
+  group_by(`Race Summary1`) |>
+  count()
+
+demographic |>
+  group_by(`International Status1`) |>
+  count()
+
+demographic |>
+  group_by(`Birth Sex1`) |>
+  count()
+
+demographic |>
+  group_by(`First Generation Status1`) |>
+  count()
+
+demographic |>
+  group_by(`On-Campus Status`) |>
+  count()
+
+demographic |>
+  group_by(`Academic Program Affiliation Summary`) |>
+  count()
+
+demographic |>
+  group_by(`Major Summary`) |>
+  count()
+
+  
+```
+```{r}
+race_count <- table(demographic$`Race Summary1`)
+pie(race_count)
+
+international <- table(demographic$`International Status1`)
+pie(international)
+
+gender <- table(demographic$`Birth Sex1`)
+pie(gender)
+
+generation <- table(demographic$`First Generation Status1`)
+pie(generation)
+
+campus <- table(demographic$`On-Campus Status`)
+pie(campus)
+
+year <- table(demographic$`Registrar Class Year - Academic Year`)
+pie(year)
+
+age <- table(demographic$`Age Groups`)
+pie(age)
+
+```
+
+
